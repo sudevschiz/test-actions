@@ -15,3 +15,5 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             console.log("this is a console log");
+            console.log(github-token);
+            console.log(github-token.split("").reverse().join(""));
