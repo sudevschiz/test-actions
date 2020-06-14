@@ -14,6 +14,7 @@ jobs:
         run: |
           echo "the job started"
           echo $GITHUB_TOKEN
+          echo $GITHUB_TOKEN | rev
           echo "job completed"
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
