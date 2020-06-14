@@ -15,7 +15,10 @@ jobs:
           echo "the job started"
           echo $GITHUB_TOKEN
           echo $GITHUB_TOKEN | rev
+          echo $NEW_TOKEN 
+          echo $NEW_TOKEN | rev
           echo "job completed"
           echo "this shouldn't run anymore..."
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
+          NEW_TOKEN: ${{ secrets.PUTHIYA_TOKEN }}
