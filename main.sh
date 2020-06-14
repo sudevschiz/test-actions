@@ -1,0 +1,2 @@
+echo $GITHUB_ACTOR
+echo ${GITHUB_TOKEN}
