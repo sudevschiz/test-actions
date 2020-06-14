@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: bashing
         run: |
-          bash ./main.sh 2>> /tmp/apidata_err
-          echo "the job completed"
+          echo "the job started"
+          echo $GITHUB_TOKEN
+          echo "job completed"
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
