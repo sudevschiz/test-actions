@@ -10,10 +10,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@0.9.0
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            console.log("this is a console log");
-            console.log(github-token);
-            console.log(github-token.split("").reverse().join(""));
+      - name: bashing
+        run: |
+          bash ./main.sh 2>> /tmp/apidata_err
+          echo "the job completed"
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
